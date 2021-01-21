@@ -1,0 +1,19 @@
+def collatz_value_error(num):
+    if num%2==0:
+        print(int(num/2))
+        return(int(num/2))
+        
+    else:
+        print(int(num*3+1))
+        return(int(num*3+1))
+    
+    
+print('Please enter a number and the Collatz sequence')
+try:
+    x = int(input())
+
+except ValueError:  
+    print('Error invalid value plz enter integers only.')
+    
+while x != 1:
+    x = collatz(x)
